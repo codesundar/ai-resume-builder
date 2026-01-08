@@ -2,6 +2,14 @@
 
 A Node.js script that generates customized resumes based on user profiles and job descriptions using OpenAI.
 
+## Video Demo
+
+[![Video Demo](https://img.youtube.com/vi/e1_f2pBzZK0/0.jpg)](https://youtu.be/e1_f2pBzZK0)
+
+## Screenshot
+
+![Screenshot](./demo/ai-resume-builder.png)
+
 ## Features
 
 - Parses user profile data from a text file
