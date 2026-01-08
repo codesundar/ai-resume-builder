@@ -1,0 +1,25 @@
+# Environment variables
+.env
+
+# Dependencies
+node_modules/
+
+# Generated files
+generated-resume.html
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo

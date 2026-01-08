@@ -1,0 +1,108 @@
+Name: Sundaravel
+Email: sundaravelit@gmail.com
+
+Phone: +91 9XXX XXX XXX
+LinkedIn: linkedin.com/in/codesundar
+GitHub: github.com/codesundar
+Website: codesundar.com
+
+Tagline: AI Engineer specializing in LLMs, Generative AI & scalable AI-powered systems
+
+SUMMARY
+AI Engineer with 8+ years of experience building production-grade AI systems and 4+ years focused on Generative AI and Large Language Models. Proven experience designing end-to-end AI solutions including RAG pipelines, AI agents, fine-tuning, and multimodal applications. AI systems built have supported 15M+ users across fintech, healthcare, and consumer products.
+
+SKILLS
+
+Programming Languages
+Python, JavaScript, TypeScript, Java
+
+AI / Machine Learning
+Large Language Models (GPT, Claude, LLaMA, Mistral)
+Prompt Engineering and Fine-tuning (LoRA, PEFT)
+Retrieval-Augmented Generation (RAG)
+AI Agents, Tool and Function Calling
+Embeddings and Vector Search
+NLP, Computer Vision, Speech-to-Text
+
+AI Frameworks and Libraries
+LangChain, LlamaIndex, HuggingFace
+OpenAI API, Anthropic, Google Gemini
+PyTorch, TensorFlow, Scikit-learn
+
+Backend and APIs
+FastAPI, Flask, Node.js, Express
+REST, GraphQL, WebSockets
+
+Databases and Vector Stores
+PostgreSQL, MongoDB
+Pinecone, Weaviate, FAISS, Chroma
+Redis
+
+DevOps and MLOps
+Docker, Kubernetes
+AWS (SageMaker, Lambda, EC2), Azure
+CI/CD, GitHub Actions, GitLab
+Model Monitoring and Logging
+
+Tools
+Git, JIRA, Postman, Figma
+
+EXPERIENCE
+
+Senior AI Engineer | Company X, USA | Remote
+Oct 2022 – Present
+Designed and deployed LLM-powered applications serving 5M+ monthly users
+Built RAG pipelines improving response accuracy by 45%
+Developed AI agents for automation, research, and customer support
+Fine-tuned open-source LLMs reducing inference cost by 60%
+Implemented scalable AI APIs using FastAPI and LangChain
+Led architecture decisions and mentored junior AI engineers
+
+AI Consultant | Company Y, USA | Remote
+Sep 2021 – Oct 2022
+Led AI initiatives across fintech and healthcare products
+Trained 30+ engineers on LLMs, prompt engineering, and RAG
+Worked directly with CTOs and CEOs to define AI strategy
+Delivered multiple AI-powered MVPs on tight timelines
+
+Freelance AI Engineer | Remote
+Jan 2015 – Oct 2021
+Built 20+ AI-powered products from ideation to production
+Developed chatbots, recommendation engines, and NLP pipelines
+Integrated AI into existing products for early-stage startups
+Delivered scalable and cost-optimized AI solutions
+
+ACHIEVEMENTS
+AI products featured in TechCrunch, YourStory, and VentureBeat
+Speaker at Google Developer Group and AI conferences
+Helped 15k+ developers through blogs and open-source projects
+One AI product ranked Top 5 in Play Store AI category
+
+EDUCATION
+Bachelor of Technology in Computer Science
+XYZ University | 2010 – 2014
+
+PROJECTS
+
+AI Knowledge Assistant
+Built enterprise-grade AI assistant using LangChain and Pinecone
+Implemented document ingestion, embeddings, and conversational memory
+
+AI Video Generation Platform
+Developed Generative AI video platform using diffusion models and LLMs
+Implemented secure authentication and subscription payments
+
+AI Customer Support Agent
+Built autonomous AI agent with tool calling and CRM integration
+Reduced human support workload by 40%
+
+Multimodal AI Chat Application
+Implemented text, image, and voice-based AI interactions
+Used Whisper, GPT-4, and vision models
+
+CERTIFICATIONS
+Generative AI with LLMs – DeepLearning.AI
+Microsoft AI and ML Engineering Professional Certificate
+Google Machine Learning Engineer
+HuggingFace NLP Specialization
+LLM Engineering – Udemy

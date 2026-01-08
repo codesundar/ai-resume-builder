@@ -1,0 +1,53 @@
+Job Title: AI Engineer
+Company: XYZ (Series C Startup)
+Location: Remote / Hybrid
+Employment Type: Full-time
+Experience Level: 3–7+ Years
+
+ABOUT XYZ
+XYZ is a fast-growing Series C startup building AI-powered products used by millions of users globally. We focus on delivering intelligent, scalable, and impactful AI solutions across web and mobile platforms.
+
+ROLE OVERVIEW
+As an AI Engineer at XYZ, you will design, build, and scale AI-driven systems with a strong focus on Large Language Models, Generative AI, and production-grade deployments. You will work closely with product, engineering, and leadership teams to deliver real-world AI solutions.
+
+RESPONSIBILITIES
+Design, develop, and deploy LLM-powered applications
+Build and optimize RAG pipelines
+Develop AI agents with tool and function calling
+Fine-tune and evaluate open-source and proprietary LLMs
+Build scalable AI APIs using FastAPI or Flask
+Integrate AI services with web and mobile applications
+Optimize latency, cost, and reliability of AI systems
+Collaborate with product managers and cross-functional teams
+Monitor and continuously improve model performance
+Contribute to system architecture and AI best practices
+
+REQUIRED QUALIFICATIONS
+3–7+ years of experience in AI, ML, or software engineering
+Strong proficiency in Python
+Hands-on experience with LLMs such as OpenAI, Claude, or LLaMA
+Experience with LangChain, LlamaIndex, or similar frameworks
+Strong understanding of RAG, embeddings, and vector databases
+Experience building production-grade AI systems
+Solid backend and API development experience
+Strong problem-solving and communication skills
+
+PREFERRED QUALIFICATIONS
+Startup or high-growth company experience
+Experience with fine-tuning techniques like LoRA or PEFT
+Experience with vector databases such as Pinecone or Weaviate
+Knowledge of MLOps, monitoring, and CI/CD pipelines
+Experience deploying AI systems on AWS, GCP, or Azure
+Background in NLP, multimodal AI, or AI agents
+
+WHAT WE OFFER
+Competitive salary and equity
+High ownership and autonomy
+Flexible remote or hybrid work environment
+Opportunity to work on real-world AI systems at scale
+Fast career growth in a post-Series C company
+
+HOW TO APPLY
+Send your resume or GitHub profile to careers@xyz.com
+
+or apply through the XYZ careers page

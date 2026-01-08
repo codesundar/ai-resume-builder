@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{name}} - Resume</title>
+    <style>
+        
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap');
+        
+        body {
+            font-family: 'Inter', 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+            font-size: 9.5pt;
+            line-height: 1.4;
+            color: #000000;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.3in 0.3in;
+            background-color: white;
+            letter-spacing: 0;
+        }
+        
+        /* Print optimization */
+        @page {
+            size: letter;
+            margin: 0.35in;
+        }
+        
+        @media print {
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            body {
+                font-size: 9.5pt;
+            }
+            
+            .resume-container {
+                width: 100%;
+                max-width: none;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+                margin-bottom: 4px;
+            }
+            
+            .header {
+                margin-bottom: 4px;
+                padding-bottom: 8px;
+            }
+            
+            .name {
+                font-size: 18pt;
+            }
+            
+            .contact-info {
+                font-size: 9pt;
+            }
+            
+            .section-title {
+                margin-bottom: 6px;
+                font-size: 12pt;
+            }
+            
+            .experience-item, .education-item, .project-item {
+                page-break-inside: avoid;
+            }
+            
+            .experience-bullets li {
+                margin-bottom: 2px;
+                font-size: 9.5pt;
+            }
+            
+            .skill {
+                margin-bottom: 3px;
+                font-size: 9.5pt;
+            }
+            
+            .certifications-content ul {
+                column-count: 2;
+            }
+        }
+        
+        /* Layout */
+        .resume-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "header"
+                "skills"
+                "experience"
+                "achievements"
+                "certifications"
+                "projects"
+                "education";
+            gap: 0;
+            max-width: 8.0in;
+            margin: 0 auto;
+        }
+        
+        .header-section { grid-area: header; }
+        .skills-section { grid-area: skills; }
+        .experience-section { grid-area: experience; }
+        .achievements-section { grid-area: achievements; }
+        .projects-section { grid-area: projects; }
+        .certifications-section { grid-area: certifications; }
+        .education-section { grid-area: education; }
+        
+        /* Header */
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 4px;
+            padding-bottom: 8px;
+        }
+        
+        .header-left {
+            display: flex;
+            flex-direction: column;
+            max-width: 60%;
+        }
+        
+        .header-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        
+        .name {
+            font-family: 'Inter', sans-serif;
+            font-size: 18pt;
+            font-weight: 700;
+            color: #000000;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+        }
+        
+        .tagline {
+            font-size: 9.5pt;
+            color: #333333;
+            font-weight: 400;
+            line-height: 1.3;
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+        
+        .contact-info {
+            font-size: 9pt;
+            color: #000000;
+            margin-top: 2px;
+        }
+        
+        .links-info {
+            font-size: 9pt;
+            color: #000000;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            text-align: right;
+        }
+        
+        .contact-item {
+            display: inline-flex;
+            align-items: center;
+            font-weight: 400;
+            white-space: nowrap;
+        }
+        
+        .link-item {
+            display: inline-flex;
+            align-items: center;
+            font-weight: 400;
+            white-space: nowrap;
+            justify-content: flex-end;
+        }
+        
+        .contact-item-icon, .link-item-icon {
+            margin-right: 4px;
+            font-size: 10pt;
+            opacity: 0.7;
+        }
+        
+        /* Section styling */
+        .section {
+            margin-bottom: 8px;
+            position: relative;
+        }
+        
+        .section-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 10pt;
+            font-weight: 700;
+            color: #000000;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid #000000;
+            padding-bottom: 2px;
+            margin-bottom: 8px;
+            margin-top: 10px;
+            position: relative;
+        }
+        
+        /* Content styling */
+        .summary {
+            font-size: 9.5pt;
+            margin-bottom: 8px;
+            color: #000000;
+            line-height: 1.4;
+        }
+        
+        /* Skills section */
+        .skills-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3px 8px;
+            margin-bottom: 8px;
+            margin-top: 4px;
+        }
+        
+        .skill {
+            display: inline-block;
+            background-color: #f8f8f8;
+            color: #000000;
+            font-size: 9pt;
+            padding: 1px 6px;
+            margin-right: 0;
+            margin-bottom: 0;
+            font-weight: 500;
+            border: none;
+            border-radius: 2px;
+            font-family: 'Roboto Mono', monospace;
+        }
+        
+        .skill-category {
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        
+        .skill-category-name {
+            font-weight: 700;
+            color: #000000;
+            margin-right: 10px;
+            font-size: 10.5pt;
+            font-family: 'Merriweather', serif;
+        }
+        
+        /* Experience section */
+        .experience-item {
+            margin-bottom: 4px;
+        }
+        
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0;
+        }
+        
+        .job-title-company {
+            font-weight: 600;
+            color: #000000;
+            font-size: 10pt;
+            margin-bottom: 1px;
+        }
+        
+        .date {
+            font-size: 9pt;
+            color: #333333;
+            font-style: normal;
+            font-weight: 400;
+            white-space: nowrap;
+        }
+        
+        .experience-bullets {
+            padding-left: 14px;
+            margin-top: 2px;
+            margin-bottom: 0;
+        }
+        
+        .experience-bullets li {
+            margin-bottom: 2px;
+            font-size: 9pt;
+            color: #000000;
+            line-height: 1.3;
+            padding-right: 0;
+        }
+        
+        /* Education section */
+        .education-item {
+            margin-bottom: 3px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        
+        .education-item strong {
+            font-weight: 600;
+            color: #000000;
+            font-size: 9pt;
+            display: inline-block;
+        }
+        
+        .education-item div {
+            font-size: 9pt;
+            color: #333333;
+            font-style: normal;
+            text-align: right;
+            white-space: nowrap;
+        }
+        
+        /* Projects section */
+        .project-item {
+            margin-bottom: 4px;
+            position: relative;
+        }
+        
+        .project-item strong {
+            font-weight: 600;
+            color: #000000;
+            font-size: 9.5pt;
+            display: inline;
+            margin-right: 4px;
+        }
+        
+        .project-item div {
+            font-size: 9pt;
+            color: #000000;
+            line-height: 1.3;
+            display: inline;
+        }
+        
+        /* Achievements section */
+        .achievements-content {
+            margin-bottom: 6px;
+        }
+        
+        .achievements-bullets {
+            padding-left: 14px;
+            margin-top: 2px;
+            margin-bottom: 0;
+            column-count: 2;
+            column-gap: 12px;
+        }
+        
+        .achievements-bullets li {
+            font-size: 9pt;
+            color: #000000;
+            margin-bottom: 2px;
+            line-height: 1.3;
+            break-inside: avoid;
+            font-weight: 500;
+        }
+        
+        /* Certifications section */
+        .certifications-content ul {
+            padding-left: 14px;
+            margin-top: 2px;
+            margin-bottom: 0;
+            column-count: 2;
+            column-gap: 12px;
+        }
+        
+        .certifications-content li {
+            font-size: 9pt;
+            color: #000000;
+            margin-bottom: 2px;
+            line-height: 1.3;
+            break-inside: avoid;
+        }
+        
+        .compact-list {
+            padding-left: 16px;
+        }
+        
+        /* Utility classes */
+        .bold {
+            font-weight: 600;
+        }
+        
+        .compact-list li {
+            margin-bottom: 1px;
+        }
+    </style>
+</head>
+<body contenteditable="true">
+    <div class="resume-container">
+        <!-- Header Section -->
+        <header class="header-section">
+            <div class="header">
+                <div class="header-left">
+                    <h1 class="name">{{name}}</h1>
+                    <div class="tagline">{{tagline}}</div>
+                    <div class="contact-info">
+                        <span class="contact-item"><span class="contact-item-icon">✉</span> {{email}} | <span class="contact-item-icon">☎</span> {{phone}}</span>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="links-info">
+                        <span class="link-item"><span class="link-item-icon">🔗</span> {{linkedin}}</span>
+                        <span class="link-item"><span class="link-item-icon">💻</span> {{github}}</span>
+                        <span class="link-item"><span class="link-item-icon">🌐</span> {{website}}</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- Skills Section -->
+        <section class="section skills-section">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-content">{{skills}}</div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="section experience-section">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-content">{{experience}}</div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section class="section achievements-section">
+            <h2 class="section-title">Key Achievements</h2>
+            <div class="achievements-content">{{achievements}}</div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section projects-section">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-content">{{projects}}</div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="section certifications-section">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications-content">{{certifications}}</div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="section education-section">
+            <h2 class="section-title">Education</h2>
+            <div class="education-content">{{education}}</div>
+        </section>
+    </div>
+</body>
+</html>
